@@ -1,0 +1,2 @@
+FROM wiznote/wizserver
+COPY NodeRSA.js /wiz/app/wizserver/node_modules/node-rsa/src/NodeRSA.js
