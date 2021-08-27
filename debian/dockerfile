@@ -1,0 +1,2 @@
+FROM debian:10.10
+COPY sources.list /etc/apt/sources.list
