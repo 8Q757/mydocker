@@ -1,0 +1,65 @@
+version: "3"
+services: 
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    restart: always
+    networks:
+      net:
+        ipv4_address: 172.19.0.2
+    expose:
+      - 3000
+    volumes:
+      - /etc/grafana/grafana.ini:/etc/grafana/grafana.ini
+      
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    restart: always
+    networks:
+      net:
+        ipv4_address: 172.19.0.3
+    expose:
+      - 9090
+    volumes:
+      - /etc/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - /etc/localtime:/etc/localtime:ro
+      
+  cadvisor:
+    image: google/cadvisor
+    container_name: cadvisor
+    restart: always
+    networks:
+      net:
+        ipv4_address: 172.19.0.4
+    expose:
+      - 8080
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:rw
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+      - /dev/disk/:/dev/disk:ro
+      
+  node-exporter:
+    image: prom/node-exporter
+    container_name: node-exporter
+    restart: always
+    networks:
+      net:
+        ipv4_address: 172.19.0.5
+    expose:
+      - 9100
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    command: '--path.procfs /host/proc --path.sysfs /host/sys --collector.filesystem.ignored-mount-points "^/(sys|proc|dev|host|etc)($$|/)"'
+      
+networks:
+  net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.19.0.0/24
