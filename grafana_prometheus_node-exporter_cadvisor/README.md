@@ -5,9 +5,9 @@
 
 ```bash
 $ mkdir -p /etc/prometheus && cd /etc/prometheus
-$ curl -O https://github.com/viticis/mydocker/blob/master/grafana_prometheus_node-exporter_cadvisor/prometheus/prometheus.yml
+$ curl -O https://raw.githubusercontent.com/viticis/mydocker/master/grafana_prometheus_node-exporter_cadvisor/prometheus/prometheus.yml
 $ mkdir -p /etc/grafana && cd /etc/grafana
-$ curl -O https://github.com/viticis/mydocker/blob/master/grafana_prometheus_node-exporter_cadvisor/grafana/grafana.ini
+$ curl -O https://raw.githubusercontent.com/viticis/mydocker/master/grafana_prometheus_node-exporter_cadvisor/grafana/grafana.ini
 ```
 
 ---
@@ -21,6 +21,6 @@ $ curl -O https://github.com/viticis/mydocker/blob/master/grafana_prometheus_nod
 Import新的dashboard, 输入ID, 例如`13112`.
 
 ---
-1. 上述命令均需要sudo权限
-2. 该仓库`grafana.ini`配置文件中, 已经打开了匿名访问, 可自行修改
-3. 部分情况挂载的该配置文件不生效, 原因是grafana使用了容器内的默认配置文件`/usr/share/grafana/conf/defaults.ini`
+1. 上述命令均需要sudo权限.
+2. 该仓库`grafana.ini`配置文件中, 已经打开了匿名访问, 可自行修改.
+3. 可能挂载的该配置文件不生效, 原因是grafana使用了容器内的默认配置文件`/usr/share/grafana/conf/defaults.ini`.
