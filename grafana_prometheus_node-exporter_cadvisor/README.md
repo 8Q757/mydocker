@@ -20,3 +20,7 @@ $ curl -O https://github.com/viticis/mydocker/blob/master/grafana_prometheus_nod
 
 Import新的dashboard, 输入ID, 例如`13112`.
 
+---
+1. 上述命令均需要sudo权限
+2. 该仓库`grafana.ini`配置文件中, 已经打开了匿名访问, 可自行修改
+3. 部分情况挂载的该配置文件不生效, 原因是grafana使用了容器内的默认配置文件`/usr/share/grafana/conf/defaults.ini`
