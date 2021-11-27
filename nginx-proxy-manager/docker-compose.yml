@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  app:
+    image: 'jc21/nginx-proxy-manager:latest'
+    container_name: nginx-proxy-manager
+    restart: always
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt 
+    environment:
+      DB_MYSQL_HOST: mariadb
+      DB_MYSQL_PORT: 3306
+      DB_MYSQL_USER: root
+      DB_MYSQL_PASSWORD: root
+      DB_MYSQL_NAME: nginx-proxy-manager
+
+networks:
+  default:
+    external:
+      name: dev
