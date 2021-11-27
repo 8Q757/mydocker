@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  app:
+    container_name: uptime
+    image: giuem/uptimerobot-page
+
+    environment: 
+      - PORT=3000
+      - LOG_LEVEL=info
+      - CRON_TIME=*/1 * * * *
+      - UPTIME_ROBOT_API=
+      - UPTIME_ROBOT_NAME_PATTERN=%group/%index/%name
+      - WEBSITE_TITLE=UPTIME
+      - WEBSITE_COPYRIGHT=
+    expose:
+      - 3000
+
+networks:
+  default:
+    external:
+      name: dev
