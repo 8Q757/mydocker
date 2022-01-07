@@ -1,0 +1,20 @@
+version: "3.3"
+
+services:
+ vaultwarden:
+  image: "vaultwarden/server"
+  container_name: "vaultwarden"
+  restart: always 
+  volumes:
+   - "./data:/data/"
+  environment: 
+   - "DATABASE_URL=mysql://vaultwarden:vaultwarden@mariadb/vaultwarden"
+   - "ADMIN_TOKEN=test_token"
+   - "RUST_BACKTRACE=1"
+  expose:
+   - "80"
+
+networks:
+  default:
+    external:
+      name: dev
