@@ -24,11 +24,15 @@ docker network create dev
 
 | 项目                                                         | 备注                                                         | 目录                                                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| MariaDB                                                      | 数据库，默认密码为`root`。                                   | [mariadb](https://github.com/viticis/mydocker/tree/master/mariadb) |
+| [MariaDB](https://mariadb.org/)                              | 数据库，默认密码为`root`。                                   | [mariadb](https://github.com/viticis/mydocker/tree/master/mariadb) |
 | [Nginx Proxy Manager](https://nginxproxymanager.com/)        | 可视化的Nginx管理面板，在浏览器中添加反向代理，申请SSL证书等。 | [nginx-proxy-manager](https://github.com/viticis/mydocker/tree/master/nginx-proxy-manager) |
 | [Next Terminal](https://next-terminal.typesafe.cn/)          | 一个轻量级堡垒机系统，易安装，易使用，支持RDP、SSH、VNC、Telnet、Kubernetes协议。 | [next-terminal](https://github.com/viticis/mydocker/tree/master/next-terminal) |
 | [UptimeRobot Page](https://github.com/giuem/uptimerobot-page) | 基于[Uptime Robot](https://uptimerobot.com/)的展示页面。     | [uptime](https://github.com/viticis/mydocker/tree/master/uptime) |
 | [为知笔记](https://www.wiz.cn/zh-cn/docker)                  | 为知笔记破解版，无限用户。                                   | [wiz](https://github.com/viticis/mydocker/tree/master/wiz)   |
+| [vaultwarden](https://github.com/dani-garcia/vaultwarden)    | [Bitwarden](https://bitwarden.com/)的第三方服务端，使用Rust实现。 | [vaultwarden](https://github.com/viticis/mydocker/tree/master/vaultwarden) |
+| [Drone](https://www.drone.io/)                               | 轻量级的持续集成。                                           | [drone](https://github.com/viticis/mydocker/tree/master/drone) |
+
+
 
 ---
 
