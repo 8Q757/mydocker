@@ -32,6 +32,7 @@ docker network create dev
 | [vaultwarden](https://github.com/dani-garcia/vaultwarden)     | [Bitwarden](https://bitwarden.com/)的第三方服务端，使用Rust实现。                               | [vaultwarden](https://github.com/viticis/mydocker/tree/master/vaultwarden)                 |
 | [Drone](https://www.drone.io/)                                | 轻量级的持续集成。                                                                              | [drone](https://github.com/viticis/mydocker/tree/master/drone)                             |
 | [acme.sh](https://github.com/acmesh-official/acme.sh)         | 纯 shell 命令的acme 协议实现，可以从 [Let's encrypt](https://letsencrypt.org/) 生成免费的证书。 | [drone](https://github.com/viticis/mydocker/tree/master/acme.sh)                           |
+| [Focalboard](https://www.focalboard.com/)                     | Focalboard 是 Asana、Trello 和 Notion 等工具的开源替代品。                                      | [focalboard](https://github.com/viticis/mydocker/tree/master/focalboard)
 
 
 

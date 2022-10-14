@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  focalboard:
+    image: mattermost/focalboard
+    container_name: focalboard
+    restart: always
+    volumes:
+      - './data:/data'
+networks:
+  default:
+      name: dev
+      external: true
