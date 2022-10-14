@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+    acme:
+        container_name: acme
+        image: neilpang/acme.sh
+        restart: always
+        volumes:
+            - './data:/acme.sh:z'
+            - '/usr/local/nginx/cert:/usr/local/nginx/cert'
+        environment:
+            - CF_Key=""
+            - CF_Email=""
+        command: daemon
+networks:
+  default:
+    name: dev
+    external: true
